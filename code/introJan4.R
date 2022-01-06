@@ -110,11 +110,11 @@ s
 
 
 #---scan function--------------------------------------------------------------
-t <- scan()
-1: 1
-2: 2
-3: 5 6 7 8 9
-8: 1
+# t <- scan()
+# 1: 1
+# 2: 2
+# 3: 5 6 7 8 9
+# 8: 1
 
 #umm not sure what he was doing
 
@@ -129,3 +129,7 @@ t <- scan()
 rep(c(1,2,3), each = 5)
 rep(c(1,2,3), times = 5 )
 
+
+u <- 1:15
+u
+u[-(1:3)] #show the vector minus the first three values

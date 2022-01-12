@@ -1,7 +1,12 @@
 #code files
+#session 1
 
 #test vector from the book
 factor(x=c("High School", "College", "Masters", "Doctorate"), levels=c("High School", "College", "Masters", "Doctorate"), ordered = TRUE)
+
+#---get working directory------------------------------------------------------
+getwd()
+
 
 
 #---introductions--------------------------------------------------------------

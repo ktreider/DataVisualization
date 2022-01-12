@@ -39,4 +39,4 @@ vignettes/*.pdf
 .Renviron
 
 # ignore raw data files
-rawData/
+#rawData/

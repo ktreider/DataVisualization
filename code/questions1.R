@@ -38,6 +38,9 @@ x <- c(1, 8, 2, 6, 3, 8, 5, 5, 5, 5, 2)
 e <- sum(x[-(which(x==2))]) #sum the values of x, excluding where x=2
 e
 
+g <- sum(x[x!=2]) #better practice!
+g
+
 #OR find the positions first, then sum excluding
 which(x==2)
 f <- sum(x[-(c(3,11))])

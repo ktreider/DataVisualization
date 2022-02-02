@@ -1,0 +1,6 @@
+sid lname city scom
+100 Morris London 0.12
+120 Johnson London 0.12
+101 Smith Chicago 0.11
+102 Kennedy Boston 0.10
+103 Jones Miami 1.11

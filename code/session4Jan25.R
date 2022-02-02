@@ -1,14 +1,13 @@
 #session 4. missed, watch video
 
-#---Accessing txt Files?-------------------------------------------------------
+#---Accessing txt Files-------------------------------------------------------
 getwd()
 file <- "./rawData/Rallfun-v39.txt"
 #data <- read.table(file,      # TXT data file indicated as string or full path to the file
-           #header = FALSE,    # Whether to display the header (TRUE) or not (FALSE)
-           #sep = "",          # Separator of the columns of the file
-           #dec = ".")         # Character used to separate decimals of the numbers in the file
+#header = FALSE,    # Whether to display the header (TRUE) or not (FALSE)
+#sep = "",          # Separator of the columns of the file
+#dec = ".")         # Character used to separate decimals of the numbers in the file
 #head(data)
-
 
 data <- source(file) #sources file to environment panel
 data
@@ -114,6 +113,8 @@ summationF3(a,b)
 
 #dot-dot-dot arguments 
 #adding FUN to arguments - to pass function as an arg to another funct (do not use parentheses)
+
+
 
 #--conditional statements------------------------------------------------------
 #conditional evaluation

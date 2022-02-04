@@ -26,23 +26,34 @@ pie(percentages, labels=labels, main="Percentage of People
 
 
 #---histogram------------------------------------------------------------------
-summary(mtcars$mpg)
+#summary(mtcars$mpg)
 mpgCut <- cut(mtcars$mpg, breaks=12, right=FALSE, ordered_result=TRUE)
-show(mpgCut)
+head(mpgCut)
 mpgFreq <- table(mpgCut)
 show(mpgFreq)
 cbind(mpgFreq)
 
+#and these are the breaks I decided upon to get 12 columns:
 brks <- c(10.4, 12.4, 14.3, 16.3, 18.2, 20.2, 22.1, 24.1, 26.1, 28, 30, 31.9, 34)
 hist(mtcars$mpg, main="Histograms of mtcars with 12 columns", 
      col="red", breaks=brks, xlim= c(min(brks), max(brks)), xlab="Miles Per Gallon", ylab = "Frequencies")
+lines(density(mtcars$mpg), lty="dotted", lwd=3) #kernel density function
 
 #or this with 12 auto breaks
-hist(mtcars$mpg, main="Histograms of mtcars with 12 columns", 
-     col="red", breaks=12, xlab="Miles Per Gallon")
+#hist(mtcars$mpg, main="Histograms of mtcars with 12 columns", 
+#     col="red", breaks=12, xlab="Miles Per Gallon")
+#lines(density(mtcars$mpg), lty="dotted", lwd=3)
 
 
-#kernel density function
+
+#---reading budget.xslx--------------------------------------------------------
+#install.packages("openxlsx")
+library(openxlsx)
+file <- "./rawData/Budget.xlsx"
+budget <- read.xlsx(xlsxFile = file, sheet = 1, startRow=3, 
+                    skipEmptyRows = TRUE, rows=3:7, colNames=TRUE, rowNames=TRUE)
+head(budget)
+str(budget)
 
 
 

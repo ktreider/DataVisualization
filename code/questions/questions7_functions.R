@@ -1,4 +1,4 @@
-#questions 8
+#questions 7
 
 #---mtcars max value-----------------------------------------------------------
 maxVal <- function(col) {

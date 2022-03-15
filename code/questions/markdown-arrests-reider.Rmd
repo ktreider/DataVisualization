@@ -1,0 +1,65 @@
+---
+title: "Function within a Function"
+author: "Katie Reider"
+date: "03/15/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### 
+#### Function to use a column from a dataset and apply a function
+```{r function}
+funct <- function(df, column, FUN, ...) {
+  col <- df[[column]]
+  return(print(FUN(col, ...)))
+}
+
+```
+###
+#### -------------------------------------------- 
+The dataset we are interested in contains the statistics, in arrests, 
+per 100,000 residents of a state in the US for different crimes in 1973.
+```{r arrestsShowData}
+#Show the dataset we are looking at
+head(USArrests, 7)
+
+```
+
+#### -------------------------------------------- 
+## US Arrests Charts
+
+### Number of Assaults per 100,000
+``` {r data1, results="hide"}
+funct(USArrests, "Assault", dotchart)
+
+```
+
+
+### Number of Murders by State per 100,000
+``` {r data2, results="hide"}
+funct(USArrests, "Murder", dotchart, labels=row.names(USArrests), cex=0.5)
+
+```
+
+#### -------------------------------------------- 
+## Other Examples
+
+### The Number of Cylinders per type of car
+``` {r newSet, results="hide"}
+funct(mtcars, "cyl", dotchart, labels=row.names(mtcars), cex=0.5)
+
+```
+
+
+## Show the range of sepal lengths:
+``` {r newFunct}
+funct(iris, "Sepal.Length", range)
+
+```
+
+### 
+### 
+
